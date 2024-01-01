@@ -15,6 +15,9 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(cors());
 
 app.use('/todo', routes);
+app.use('/',async (req, res) =>{
+    console.log(`API is working!`);
+})
 
 const port = process.env.PORT || 9000;
 // console.log(port,'[port]');
